@@ -3,22 +3,174 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PersonalityQuizApp.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="LightGray"
+                   BorderColor="Black">
+            <Label Text="Noah's Personality Quiz"
+                   FontSize="Title"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+            </Frame>
 
+            <!--Question 1-->
+            <Frame BackgroundColor="LightGray"
+                   Margin="20"
+                   BorderColor="Black"
+                   CornerRadius="30">
+            <StackLayout RadioButtonGroup.GroupName="question1"
+                         Spacing="5">
+                    <Label Text="Question 1"
+                           FontSize="Large"
+                           FontAttributes="Italic"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="The teacher left the classroom for an emergency trip to the bathroom and hasn't come back yet. What do you do?"
+                       TextColor="Black"
+                       FontSize="Medium"/>
+                <RadioButton Content="Stay in your seat and behave until the teacher comes back"
+                             Value="s"/>
+                <RadioButton Content="Think about why the teacher hasn't come back yet"
+                             Value="t"/>
+                <RadioButton Content="Entertain your classmates until the teacher returns"
+                             Value="a"/>
+                <RadioButton Content="Catch up with your classmates"
+                             Value="r"/>
+            </StackLayout>
+            </Frame>
+
+            <!--Question 2-->
+            <Frame BackgroundColor="LightGray"
+                   Margin="20"
+                   BorderColor="Black"
+                   CornerRadius="30">
+                <StackLayout RadioButtonGroup.GroupName="question2"
+                         Spacing="5">
+                    <Label Text="Question 2"
+                           FontSize="Large"
+                           FontAttributes="Italic"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="A friend asks you to critique their code, what do you do and say?"
+                       TextColor="Black"
+                       FontSize="Medium"/>
+                    <RadioButton Content="Analyze it thoroughly and provide honest, straightforward feedback"
+                             Value="s"/>
+                    <RadioButton Content="Provide suggestions for future development and point out possible bugs"
+                             Value="t"/>
+                    <RadioButton Content="Code with them and help improve it"
+                             Value="a"/>
+                    <RadioButton Content="Go through the code and give them some encouragement"
+                             Value="r"/>
+                </StackLayout>
+            </Frame>
+
+            <!--Question 3-->
+            <Frame BackgroundColor="LightGray"
+                   Margin="20"
+                   BorderColor="Black"
+                   CornerRadius="30">
+                <StackLayout RadioButtonGroup.GroupName="question3"
+                         Spacing="5">
+                    <Label Text="Question 3"
+                           FontSize="Large"
+                           FontAttributes="Italic"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="A dragon has been stealing sheep from a village, how would you resolve the situation?"
+                       TextColor="Black"
+                       FontSize="Medium"/>
+                    <RadioButton Content="Look to the authorities and ask for aid to defeat the dragon"
+                             Value="s"/>
+                    <RadioButton Content="Try to come up with a way to trap the dragon"
+                             Value="t"/>
+                    <RadioButton Content="ADVENTURE AWAITS! HUZZAH!"
+                             Value="a"/>
+                    <RadioButton Content="See if the dragon can be reasoned with"
+                             Value="r"/>
+                </StackLayout>
+            </Frame>
+
+            <!--Question 4-->
+            <Frame BackgroundColor="LightGray"
+                   Margin="20"
+                   BorderColor="Black"
+                   CornerRadius="30">
+                <StackLayout RadioButtonGroup.GroupName="question4"
+                         Spacing="5">
+                    <Label Text="Question 4"
+                           FontSize="Large"
+                           FontAttributes="Italic"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="What are rules?"
+                       TextColor="Black"
+                       FontSize="Medium"/>
+                    <RadioButton Content="Something to be followed"
+                             Value="s"/>
+                    <RadioButton Content="Something to be questioned and revised"
+                             Value="t"/>
+                    <RadioButton Content="Suggestions"
+                             Value="a"/>
+                    <RadioButton Content="Something to help everyone"
+                             Value="r"/>
+                </StackLayout>
+            </Frame>
+
+            <!--Question 5-->
+            <Frame BackgroundColor="LightGray"
+                   Margin="20"
+                   BorderColor="Black"
+                   CornerRadius="30">
+                <StackLayout RadioButtonGroup.GroupName="question5"
+                         Spacing="5">
+                    <Label Text="Question 5"
+                           FontSize="Large"
+                           FontAttributes="Italic"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="I love..."
+                       TextColor="Black"
+                       FontSize="Medium"/>
+                    <RadioButton Content="Order, clarity, and stability"
+                             Value="s"/>
+                    <RadioButton Content="Thinking about things and solving problems"
+                             Value="t"/>
+                    <RadioButton Content="Doing fun, daring stuff"
+                             Value="a"/>
+                    <RadioButton Content="Helping people"
+                             Value="r"/>
+                </StackLayout>
+            </Frame>
+
+            <!--Question 6-->
+            <Frame BackgroundColor="LightGray"
+                   Margin="20"
+                   BorderColor="Black"
+                   CornerRadius="30">
+                <StackLayout RadioButtonGroup.GroupName="question6"
+                         Spacing="5">
+                    <Label Text="Question 6"
+                           FontSize="Large"
+                           FontAttributes="Italic"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="I have some free time! Now I can…"
+                       TextColor="Black"
+                       FontSize="Medium"/>
+                    <RadioButton Content="Organize and/or plan some future activities"
+                             Value="s"/>
+                    <RadioButton Content="Learn something new"
+                             Value="t"/>
+                    <RadioButton Content="Go do something adventurous"
+                             Value="a"/>
+                    <RadioButton Content="Do some volunteer work"
+                             Value="r"/>
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Show results!"
+                    FontSize="Medium"
+                    Margin="20 20 20 20"
+                    Padding="10"
+                    CornerRadius="30"
+                    BorderWidth="3"
+                    BorderColor="Black"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
