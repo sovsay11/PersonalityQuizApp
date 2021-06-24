@@ -7,7 +7,7 @@
         <StackLayout>
             <Frame BackgroundColor="LightGray"
                    BorderColor="Black">
-            <Label Text="Noah's Personality Quiz"
+                <Label Text="Noah's Personality Quiz"
                    FontSize="Title"
                    TextColor="Black"
                    FontAttributes="Bold"
@@ -19,8 +19,9 @@
                    Margin="20"
                    BorderColor="Black"
                    CornerRadius="30">
-            <StackLayout RadioButtonGroup.GroupName="question1"
-                         Spacing="5">
+                <StackLayout x:Name="QuestionBank1"
+                             RadioButtonGroup.GroupName="question1"
+                             Spacing="5">
                     <Label Text="Question 1"
                            FontSize="Large"
                            FontAttributes="Italic"
@@ -28,15 +29,19 @@
                     <Label Text="The teacher left the classroom for an emergency trip to the bathroom and hasn't come back yet. What do you do?"
                        TextColor="Black"
                        FontSize="Medium"/>
-                <RadioButton Content="Stay in your seat and behave until the teacher comes back"
-                             Value="s"/>
-                <RadioButton Content="Think about why the teacher hasn't come back yet"
-                             Value="t"/>
-                <RadioButton Content="Entertain your classmates until the teacher returns"
-                             Value="a"/>
-                <RadioButton Content="Catch up with your classmates"
-                             Value="r"/>
-            </StackLayout>
+                    <RadioButton Content="Stay in your seat and behave until the teacher comes back"
+                                 Value="s"
+                                 CheckedChanged="Question1_CheckChanged"/>
+                    <RadioButton Content="Think about why the teacher hasn't come back yet"
+                                 Value="t"
+                                 CheckedChanged="Question1_CheckChanged"/>
+                    <RadioButton Content="Entertain your classmates until the teacher returns"
+                                 Value="a"
+                                 CheckedChanged="Question1_CheckChanged"/>
+                    <RadioButton Content="Catch up with your classmates"
+                                 Value="r"
+                                 CheckedChanged="Question1_CheckChanged"/>
+                </StackLayout>
             </Frame>
 
             <!--Question 2-->
@@ -44,8 +49,9 @@
                    Margin="20"
                    BorderColor="Black"
                    CornerRadius="30">
-                <StackLayout RadioButtonGroup.GroupName="question2"
-                         Spacing="5">
+                <StackLayout x:Name="QuestionBank2"
+                             RadioButtonGroup.GroupName="question2"
+                             Spacing="5">
                     <Label Text="Question 2"
                            FontSize="Large"
                            FontAttributes="Italic"
@@ -69,8 +75,9 @@
                    Margin="20"
                    BorderColor="Black"
                    CornerRadius="30">
-                <StackLayout RadioButtonGroup.GroupName="question3"
-                         Spacing="5">
+                <StackLayout x:Name="QuestionBank3"
+                             RadioButtonGroup.GroupName="question3"
+                             Spacing="5">
                     <Label Text="Question 3"
                            FontSize="Large"
                            FontAttributes="Italic"
@@ -94,7 +101,8 @@
                    Margin="20"
                    BorderColor="Black"
                    CornerRadius="30">
-                <StackLayout RadioButtonGroup.GroupName="question4"
+                <StackLayout x:Name="QuestionBank4"
+                             RadioButtonGroup.GroupName="question4"
                          Spacing="5">
                     <Label Text="Question 4"
                            FontSize="Large"
@@ -119,7 +127,8 @@
                    Margin="20"
                    BorderColor="Black"
                    CornerRadius="30">
-                <StackLayout RadioButtonGroup.GroupName="question5"
+                <StackLayout x:Name="QuestionBank5"
+                             RadioButtonGroup.GroupName="question5"
                          Spacing="5">
                     <Label Text="Question 5"
                            FontSize="Large"
@@ -144,7 +153,8 @@
                    Margin="20"
                    BorderColor="Black"
                    CornerRadius="30">
-                <StackLayout RadioButtonGroup.GroupName="question6"
+                <StackLayout x:Name="QuestionBank6"
+                             RadioButtonGroup.GroupName="question6"
                          Spacing="5">
                     <Label Text="Question 6"
                            FontSize="Large"
@@ -164,13 +174,15 @@
                 </StackLayout>
             </Frame>
 
-            <Button Text="Show results!"
+            <Button x:Name="BtnShowResults"
+                    Text="Show results!"
                     FontSize="Medium"
-                    Margin="20 20 20 20"
+                    Margin="20,20,20,20"
                     Padding="10"
                     CornerRadius="30"
                     BorderWidth="3"
-                    BorderColor="Black"/>
+                    BorderColor="Black"
+                    Clicked="BtnShowResults_Clicked"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
