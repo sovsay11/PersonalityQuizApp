@@ -60,13 +60,17 @@
                        TextColor="Black"
                        FontSize="Medium"/>
                     <RadioButton Content="Analyze it thoroughly and provide honest, straightforward feedback"
-                             Value="s"/>
+                             Value="s"
+                                 CheckedChanged="Question2_CheckChanged"/>
                     <RadioButton Content="Provide suggestions for future development and point out possible bugs"
-                             Value="t"/>
+                             Value="t"
+                                 CheckedChanged="Question2_CheckChanged"/>
                     <RadioButton Content="Code with them and help improve it"
-                             Value="a"/>
+                             Value="a"
+                                 CheckedChanged="Question2_CheckChanged"/>
                     <RadioButton Content="Go through the code and give them some encouragement"
-                             Value="r"/>
+                             Value="r"
+                                 CheckedChanged="Question2_CheckChanged"/>
                 </StackLayout>
             </Frame>
 
@@ -86,13 +90,17 @@
                        TextColor="Black"
                        FontSize="Medium"/>
                     <RadioButton Content="Look to the authorities and ask for aid to defeat the dragon"
-                             Value="s"/>
+                             Value="s"
+                                 CheckedChanged="Question3_CheckChanged"/>
                     <RadioButton Content="Try to come up with a way to trap the dragon"
-                             Value="t"/>
+                             Value="t"
+                                 CheckedChanged="Question3_CheckChanged"/>
                     <RadioButton Content="ADVENTURE AWAITS! HUZZAH!"
-                             Value="a"/>
+                             Value="a"
+                                 CheckedChanged="Question3_CheckChanged"/>
                     <RadioButton Content="See if the dragon can be reasoned with"
-                             Value="r"/>
+                             Value="r"
+                                 CheckedChanged="Question3_CheckChanged"/>
                 </StackLayout>
             </Frame>
 
@@ -112,13 +120,17 @@
                        TextColor="Black"
                        FontSize="Medium"/>
                     <RadioButton Content="Something to be followed"
-                             Value="s"/>
+                             Value="s"
+                                 CheckedChanged="Question4_CheckChanged"/>
                     <RadioButton Content="Something to be questioned and revised"
-                             Value="t"/>
+                             Value="t"
+                                 CheckedChanged="Question4_CheckChanged"/>
                     <RadioButton Content="Suggestions"
-                             Value="a"/>
+                             Value="a"
+                                 CheckedChanged="Question4_CheckChanged"/>
                     <RadioButton Content="Something to help everyone"
-                             Value="r"/>
+                             Value="r"
+                                 CheckedChanged="Question4_CheckChanged"/>
                 </StackLayout>
             </Frame>
 
@@ -138,13 +150,17 @@
                        TextColor="Black"
                        FontSize="Medium"/>
                     <RadioButton Content="Order, clarity, and stability"
-                             Value="s"/>
+                             Value="s"
+                                 CheckedChanged="Question5_CheckChanged"/>
                     <RadioButton Content="Thinking about things and solving problems"
-                             Value="t"/>
+                             Value="t"
+                                 CheckedChanged="Question5_CheckChanged"/>
                     <RadioButton Content="Doing fun, daring stuff"
-                             Value="a"/>
+                             Value="a"
+                                 CheckedChanged="Question5_CheckChanged"/>
                     <RadioButton Content="Helping people"
-                             Value="r"/>
+                             Value="r"
+                                 CheckedChanged="Question5_CheckChanged"/>
                 </StackLayout>
             </Frame>
 
@@ -164,13 +180,17 @@
                        TextColor="Black"
                        FontSize="Medium"/>
                     <RadioButton Content="Organize and/or plan some future activities"
-                             Value="s"/>
+                             Value="s"
+                                 CheckedChanged="Question6_CheckChanged"/>
                     <RadioButton Content="Learn something new"
-                             Value="t"/>
+                             Value="t"
+                                 CheckedChanged="Question6_CheckChanged"/>
                     <RadioButton Content="Go do something adventurous"
-                             Value="a"/>
+                             Value="a"
+                                 CheckedChanged="Question6_CheckChanged"/>
                     <RadioButton Content="Do some volunteer work"
-                             Value="r"/>
+                             Value="r"
+                                 CheckedChanged="Question6_CheckChanged"/>
                 </StackLayout>
             </Frame>
 
