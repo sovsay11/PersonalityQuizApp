@@ -10,23 +10,43 @@ namespace PersonalityQuizApp
 {
     public partial class MainPage : ContentPage
     {
+        // variables to hold response values
+        const double questionNumber = 6.0;
         int s = 0, t = 0, a = 0, r = 0;
         public MainPage()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Displays the results of the quiz to the user and checks
+        /// if the user answered all the questions
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnShowResults_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Results", $"You are:\n" +
-                $"{s/6.0*100:F2}% structure-oriented\n" +
-                $"{t/6.0*100:F2}% task-oriented\n" +
-                $"{a/6.0*100:F2}% action-oriented\n" +
-                $"{r/6.0*100:F2}% relationship-oriented", "Close");
+            if (s + t + a + r != questionNumber)
+            {
+                DisplayAlert("Error", "Please answer all the questions", "Close");
+            }
+            else
+            {
+                DisplayAlert("Results", $"You are:\n" +
+                    $"{s / questionNumber * 100:F2}% structure-oriented\n" +
+                    $"{t / questionNumber * 100:F2}% task-oriented\n" +
+                    $"{a / questionNumber * 100:F2}% action-oriented\n" +
+                    $"{r / questionNumber * 100:F2}% relationship-oriented", "Close");
+            }
         }
 
-        // triggers once a radio button is selected, will trigger twice
-        // if a radio button is changed (the check is changed twice)
+        /// <summary>
+        /// Triggers once a radio button is selected, runs the CheckSelectedValue() method
+        /// to determine whether the passed in radio button is being checked or unchecked
+        /// Note: this method will trigger twice if a radio button is changed (the check is changed twice)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Question1_CheckChanged(object sender, CheckedChangedEventArgs e)
         {
             // This grabs the sender object (sent by the radio button)
@@ -69,8 +89,15 @@ namespace PersonalityQuizApp
             CheckSelectedValue(selectedButton.IsChecked, selectedButton.Value.ToString());
         }
 
+        /// <summary>
+        /// Will determine if the radio button passed in is being checked or unchecked
+        /// and then add or subtract values based on that assertion
+        /// </summary>
+        /// <param name="isChecked"></param>
+        /// <param name="v"></param>
         private void CheckSelectedValue(bool isChecked, string v)
         {
+            // the radio button is selected, so we add according to the value of the rb
             if (isChecked)
             {
                 switch (v)
@@ -91,6 +118,7 @@ namespace PersonalityQuizApp
                         break;
                 }
             }
+            // assume the radio button is being unchecked, so we subtract the value
             else
             {
                 switch (v)

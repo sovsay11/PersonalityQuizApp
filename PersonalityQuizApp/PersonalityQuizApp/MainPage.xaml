@@ -194,6 +194,7 @@
                 </StackLayout>
             </Frame>
 
+            <!--Button to calculate and display the results of the quiz-->
             <Button x:Name="BtnShowResults"
                     Text="Show results!"
                     FontSize="Medium"
