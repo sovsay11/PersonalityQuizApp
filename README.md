@@ -23,14 +23,14 @@ Once that is done, unzip the folder and open the project in VS by launching the 
   <li>
     Install <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio<a> (any version will work)
   </li>
-  <li>A mobile device running Android (tablet, phone, etc.)
+    <li>A mobile device running Android (tablet, phone, etc.)</li>
 </ul>
 
 ### Installation
 If you want to clone this repository for future use instead of downloading the zipped folder, you can do so by running the following command(s) in Git:
 
 ```sh
-https://github.com/sovsay11/PersonalityQuizApp.git
+git clone https://github.com/sovsay11/PersonalityQuizApp.git
 ```
     
 
